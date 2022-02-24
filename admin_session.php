@@ -1,0 +1,21 @@
+<?php
+ 
+  include'connection.php';
+  
+  
+  session_start();
+    
+  $admin_id=$_SESSION['userid'];
+  $admin_firstname=$_SESSION['userfirstname'];
+  $admin_lastname=$_SESSION['userlastname'];
+  $admin_email=$_SESSION['useremail'];
+  $admin_phone=$_SESSION['userphone'];
+  $admin_password=$_SESSION['userpassword'];
+  $admin_role=$_SESSION['userrole'];
+  $admin_emp_id=$_SESSION['user_emp_id'];
+ 
+  if ($admin_email=='' || $admin_role!="admin") {
+    header("location:signout.php");
+  }
+
+  ?>
